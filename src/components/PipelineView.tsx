@@ -27,6 +27,7 @@ export default function PipelineView({ contacts }: { contacts: Contact[] }) {
 
   function handlePointerDown(e: React.PointerEvent, id: string) {
     if (e.button !== undefined && e.button !== 0) return;
+    e.preventDefault();
     (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
     startRef.current = { x: e.clientX, y: e.clientY };
     movedRef.current = false;
