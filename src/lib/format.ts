@@ -24,6 +24,19 @@ export function isOverdue(dateStr: string): boolean {
   return date.getTime() < today.getTime();
 }
 
+const PRIORITY_RANK = { urgent: 0, high: 1, normal: 2 };
+
+export function priorityRank(priority: keyof typeof PRIORITY_RANK): number {
+  return PRIORITY_RANK[priority];
+}
+
+export function daysAgo(dateStr: string): number {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const date = new Date(dateStr + "T00:00:00");
+  return Math.round((today.getTime() - date.getTime()) / 86400000);
+}
+
 export function initials(name: string): string {
   return name
     .split(" ")

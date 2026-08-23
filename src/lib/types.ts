@@ -24,11 +24,15 @@ export type Activity = {
   date: string;
 };
 
+export type TaskPriority = "urgent" | "high" | "normal";
+
 export type Task = {
   id: string;
   contactId: string;
   title: string;
   dueDate: string;
+  createdAt: string;
+  priority: TaskPriority;
   done: boolean;
 };
 
