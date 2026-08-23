@@ -1,4 +1,4 @@
-import { Contact, Message, Task } from "./types";
+import { CalendarEvent, Contact, Deal, Message, Task } from "./types";
 
 export const contacts: Contact[] = [
   {
@@ -158,6 +158,117 @@ export const messages: Message[] = [
     body: "Perfect, thank you!",
     date: "2026-08-21",
     time: "9:21 AM",
+  },
+];
+
+export const events: CalendarEvent[] = [
+  {
+    id: "e1",
+    contactId: "2",
+    title: "Intro call",
+    type: "call",
+    date: "2026-08-23",
+    time: "5:00 PM",
+  },
+  {
+    id: "e2",
+    title: "Open House — 90 Oakwood Dr",
+    type: "open-house",
+    date: "2026-08-22",
+    time: "1:00 PM",
+  },
+  {
+    id: "e3",
+    contactId: "1",
+    title: "Showing — 214 Maple Ct",
+    type: "showing",
+    date: "2026-08-24",
+    time: "11:00 AM",
+  },
+  {
+    id: "e4",
+    contactId: "4",
+    title: "Condo showing — 88 Congress Ave",
+    type: "showing",
+    date: "2026-08-25",
+    time: "4:00 PM",
+  },
+  {
+    id: "e5",
+    contactId: "3",
+    title: "Final walkthrough",
+    type: "showing",
+    date: "2026-08-27",
+    time: "2:00 PM",
+  },
+  {
+    id: "e6",
+    contactId: "6",
+    title: "Listing consultation",
+    type: "listing-appointment",
+    date: "2026-08-29",
+    time: "1:00 PM",
+  },
+  {
+    id: "e7",
+    contactId: "3",
+    title: "Closing",
+    type: "closing",
+    date: "2026-09-15",
+    time: "10:00 AM",
+  },
+];
+
+export const deals: Deal[] = [
+  {
+    id: "d1",
+    contactId: "1",
+    type: "buyer",
+    stage: "Submitting Offers",
+    title: "214 Maple Ct",
+    value: 425000,
+    closeDate: "2026-09-20",
+    closeDateLabel: "Projected Close Date",
+  },
+  {
+    id: "d2",
+    contactId: "4",
+    type: "buyer",
+    stage: "Submitting Offers",
+    title: "88 Congress Ave #12",
+    value: 285000,
+    closeDate: "2026-09-10",
+    closeDateLabel: "Projected Close Date",
+  },
+  {
+    id: "d3",
+    contactId: "3",
+    type: "buyer",
+    stage: "Pending",
+    title: "119 Chambers Creek Cr",
+    value: 512000,
+    closeDate: "2026-09-15",
+    closeDateLabel: "Projected Close Date",
+  },
+  {
+    id: "d4",
+    contactId: "5",
+    type: "buyer",
+    stage: "Closed",
+    title: "5 Birchwood Ln",
+    value: 398000,
+    closeDate: "2026-06-30",
+    closeDateLabel: "Close Date",
+  },
+  {
+    id: "d5",
+    contactId: "6",
+    type: "seller",
+    stage: "Active Option Contract",
+    title: "412 Sunset Terrace",
+    value: 340000,
+    closeDate: "2026-10-01",
+    closeDateLabel: "Projected Close Date",
   },
 ];
 

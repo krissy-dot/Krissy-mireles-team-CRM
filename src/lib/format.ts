@@ -37,6 +37,14 @@ export function daysAgo(dateStr: string): number {
   return Math.round((today.getTime() - date.getTime()) / 86400000);
 }
 
+export function formatCurrency(value: number): string {
+  return value.toLocaleString("en-US", {
+    style: "currency",
+    currency: "USD",
+    maximumFractionDigits: 0,
+  });
+}
+
 export function initials(name: string): string {
   return name
     .split(" ")

@@ -60,3 +60,36 @@ export type Message = {
   date: string;
   time: string;
 };
+
+export type EventType = "showing" | "closing" | "listing-appointment" | "open-house" | "call";
+
+export type CalendarEvent = {
+  id: string;
+  contactId?: string;
+  title: string;
+  type: EventType;
+  date: string;
+  time: string;
+};
+
+export type DealType = "buyer" | "seller" | "lease";
+
+export type DealStage = "Submitting Offers" | "Active Option Contract" | "Pending" | "Closed";
+
+export const DEAL_STAGES: DealStage[] = [
+  "Submitting Offers",
+  "Active Option Contract",
+  "Pending",
+  "Closed",
+];
+
+export type Deal = {
+  id: string;
+  contactId: string;
+  type: DealType;
+  stage: DealStage;
+  title: string;
+  value: number;
+  closeDate: string;
+  closeDateLabel: "Close Date" | "Projected Close Date";
+};

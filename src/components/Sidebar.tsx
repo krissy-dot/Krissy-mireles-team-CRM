@@ -8,6 +8,8 @@ const NAV = [
   { href: "/inbox", label: "Inbox", icon: "inbox" },
   { href: "/contacts", label: "Contacts", icon: "people" },
   { href: "/pipeline", label: "Pipeline", icon: "pipeline" },
+  { href: "/deals", label: "Deals", icon: "deals" },
+  { href: "/calendar", label: "Calendar", icon: "calendar" },
   { href: "/tasks", label: "Follow-Ups", icon: "check" },
 ];
 
@@ -43,6 +45,21 @@ function Icon({ name }: { name: string }) {
           <rect x="3" y="4" width="4.5" height="16" rx="1" />
           <rect x="9.75" y="4" width="4.5" height="11" rx="1" />
           <rect x="16.5" y="4" width="4.5" height="7" rx="1" />
+        </svg>
+      );
+    case "deals":
+      return (
+        <svg className={common} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+          <circle cx="12" cy="12" r="8.5" />
+          <path d="M12 7.5v9M9.5 9.8c0-1.3 1.1-2.1 2.5-2.1s2.5.7 2.5 1.9c0 2.6-5 1.3-5 3.9 0 1.2 1.1 1.9 2.5 1.9s2.5-.8 2.5-2.1" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      );
+    case "calendar":
+      return (
+        <svg className={common} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+          <rect x="3.5" y="5" width="17" height="15" rx="2" />
+          <path d="M3.5 9.5h17" strokeLinecap="round" />
+          <path d="M8 3v3.5M16 3v3.5" strokeLinecap="round" />
         </svg>
       );
     case "check":
