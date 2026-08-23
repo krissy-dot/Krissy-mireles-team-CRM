@@ -43,3 +43,16 @@ export type Contact = {
   lastContact: string;
   activity: Activity[];
 };
+
+export type MessageChannel = "email" | "text";
+
+export type Message = {
+  id: string;
+  contactId: string;
+  channel: MessageChannel;
+  direction: "inbound" | "outbound";
+  subject?: string;
+  body: string;
+  date: string;
+  time: string;
+};

@@ -1,4 +1,4 @@
-import { Contact, Task } from "./types";
+import { Contact, Message, Task } from "./types";
 
 export const contacts: Contact[] = [
   {
@@ -81,6 +81,83 @@ export const contacts: Contact[] = [
     activity: [
       { id: "a9", type: "call", summary: "Checked in, mentioned they may list next spring.", date: "2026-05-02" },
     ],
+  },
+];
+
+export const messages: Message[] = [
+  {
+    id: "m1",
+    contactId: "2",
+    channel: "email",
+    direction: "inbound",
+    subject: "Investment property inquiry",
+    body: "Hi, I saw your website and I'm interested in duplexes or triplexes in the area. Do you have any current listings that fit? Budget is flexible for the right property.",
+    date: "2026-08-22",
+    time: "3:40 PM",
+  },
+  {
+    id: "m2",
+    contactId: "4",
+    channel: "text",
+    direction: "inbound",
+    body: "Hi! Following up - do you have any new condo listings under $300k downtown?",
+    date: "2026-08-18",
+    time: "11:02 AM",
+  },
+  {
+    id: "m3",
+    contactId: "3",
+    channel: "email",
+    direction: "outbound",
+    subject: "Inspection Report + Next Steps",
+    body: "Hi Alvarez family, attached is the inspection report from yesterday. Let's discuss the two items flagged before we move to appraisal.",
+    date: "2026-08-20",
+    time: "10:00 AM",
+  },
+  {
+    id: "m4",
+    contactId: "3",
+    channel: "email",
+    direction: "inbound",
+    body: "Thanks for sending this over. We're okay with the roof note but want a quote on the water heater before signing off.",
+    date: "2026-08-20",
+    time: "2:15 PM",
+  },
+  {
+    id: "m5",
+    contactId: "3",
+    channel: "email",
+    direction: "outbound",
+    body: "Sounds good, I'll get a quote from our contractor today and send it your way.",
+    date: "2026-08-20",
+    time: "2:30 PM",
+  },
+  {
+    id: "m6",
+    contactId: "1",
+    channel: "text",
+    direction: "inbound",
+    body: "Hey! Just wanted to confirm we're still on for Saturday at 214 Maple Ct?",
+    date: "2026-08-21",
+    time: "9:14 AM",
+  },
+  {
+    id: "m7",
+    contactId: "1",
+    channel: "text",
+    direction: "outbound",
+    body: "Yes! 11am, see you there 😊",
+    date: "2026-08-21",
+    time: "9:20 AM",
+  },
+  {
+    id: "m8",
+    contactId: "1",
+    channel: "text",
+    direction: "inbound",
+    body: "Perfect, thank you!",
+    date: "2026-08-21",
+    time: "9:21 AM",
   },
 ];
 
